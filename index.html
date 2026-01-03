@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yedu – Mine Chudail ❤️</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd6e8, #fff1f7);
+    text-align: center;
+    color: #444;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    color: #ff4d88;
+    margin-top: 40px;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    color: #ff6f9f;
+    font-weight: normal;
+  }
+
+  .card {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  button {
+    background: #ff4d88;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  footer {
+    margin: 30px 0;
+    color: #777;
+    font-size: 14px;
+  }
+
+  .heart {
+    position: fixed;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    color: #ff4d88;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Hey Yedu 💕</h1>
+<h2>Yedu – Mine Chudail ❤️</h2>
+
+<div class="card">
+  <p>
+    Filmon ka pyaar shayad achha hota hai,  
+    par tumhare saath wala pyaar  
+    **real hai… aur sabse khaas hai** 🎬❤️
+  </p>
+</div>
+
+<div class="card">
+  <p>
+    Tumhari ek muskaan meri thakaan mita deti hai,  
+    aur tumhari awaaz meri duniya shaant kar deti hai 🥺  
+    Main tumhe har din, har haal mein choose karta hoon.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Countdown to Yedu’s Birthday 🎂</h3>
+  <p id="countdown">Loading...</p>
+  <p>
+    5 May 2006 –  
+    jis din meri zindagi ke future ka  
+    sabse pyara hissa paida hua ✨
+  </p>
+</div>
+
+<div class="card">
+  <button onclick="showLove()">Dil ki baat 💌</button>
+  <p id="secret" style="display:none; margin-top:15px;">
+    Agar sab kuch dobara shuru karna pade,  
+    toh bhi main tumhe hi chahunga ❤️  
+    – Tumhari Chudail 🖤
+  </p>
+</div>
+
+<footer>
+  Made with endless love by Chudail ❤️
+</footer>
+
+<script>
+  function showLove() {
+    document.getElementById("secret").style.display = "block";
+  }
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+  setInterval(createHeart, 500);
+
+  // Birthday countdown
+  const countdownEl = document.getElementById("countdown");
+  function updateCountdown() {
+    const now = new Date();
+    let year = now.getFullYear();
+    let birthday = new Date(`May 5, ${year} 00:00:00`);
+    if (now > birthday) birthday = new Date(`May 5, ${year + 1} 00:00:00`);
+
+    const diff = birthday - now;
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff / (1000*60*60)) % 24);
+    const m = Math.floor((diff / (1000*60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+
+    countdownEl.innerHTML = `${d} days ${h} hrs ${m} min ${s} sec 💕`;
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
