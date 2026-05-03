@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yedu ❤️ My Valentine</title>
+<title>Happy Birthday Yedu 😚💖</title>
 
 <style>
 body{
@@ -36,19 +36,10 @@ button{
   border:none;
   border-radius:30px;
   cursor:pointer;
-  margin:10px;
+  margin-top:15px;
   font-weight:bold;
-}
-
-#yesBtn{
   background:white;
   color:#ff4d88;
-}
-
-#noBtn{
-  background:#ff1a66;
-  color:white;
-  position:absolute;
 }
 
 .heart{
@@ -66,41 +57,46 @@ button{
 
 <body>
 
-<h1>Happy Valentine's Day Yedu 💖</h1>
+<h1>Happy Birthday meri cute Yedu 😌💖</h1>
 
 <div class="card">
 <p>
-Yedu, tum meri life ki sabse cute kahani ho 🥺💕  
-Tumhari smile meri duniya roshan kar deti hai.  
-Aaj ek important sawaal hai...
+Aaj ka din duniya ka sabse special din hai,  
+kyuki aaj meri cute si rajkumari ka bday hai😌💕  
+Tum meri life ki sabse pyari smile ho ji.
 </p>
+</div>
 
-<h3>Kya tum meri Forever Valentine banogi? 💍</h3>
+<div class="card">
+<p>
+Yedu, tum sirf meri Yedu nahi ho,  
+tum meri khushi, meri shanti, meri duniya ho 🥺❤️  
+Main har din tumhe aur zyada pyaar karta hoon ji.
+</p>
+</div>
 
-<button id="yesBtn" onclick="yesLove()">Yes 💖</button>
-<button id="noBtn">No 😜</button>
+<div class="card">
+<h3>Click karo 🎁</h3>
+<button onclick="showWish()">Open Surprise 💖</button>
 
-<p id="result" style="margin-top:15px;"></p>
+<p id="wish" style="display:none;margin-top:15px;">
+Tumhari har wish puri ho 🎂✨  
+Tum hamesha khush raho 😍  
+Aur main hamesha tumhara rahu ji ❤️  
+<br><br>
+💌 Happy Birthda Mine Chudail 💖  
+– Tumhara tubelight🖤
+</p>
 </div>
 
 <footer style="position:fixed;bottom:10px;width:100%;font-size:14px;">
-Made with endless love for Yedu ❤️
+Made with endless love ❤️
 </footer>
 
 <script>
-function yesLove(){
-  document.getElementById("result").innerHTML=
-  "Yayyyyy 😍💖<br>Ab tum officially meri ho! 💍💕<br>I love you sooo much Yedu ❤️";
+function showWish(){
+  document.getElementById("wish").style.display="block";
 }
-
-const noBtn = document.getElementById("noBtn");
-
-noBtn.addEventListener("mouseover", function(){
-  const x = Math.random() * (window.innerWidth - 100);
-  const y = Math.random() * (window.innerHeight - 100);
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
-});
 
 function createHeart(){
   const heart=document.createElement("div");
